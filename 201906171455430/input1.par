@@ -1,0 +1,22 @@
+# main shock directory
+ddir = ./201906171455430/data/
+# Green's functions directory
+gdir = ./201906171455430/gfun
+# lengths for P and S phases
+len = 600 1400
+# the cutoff corner frequency of a filter for P
+flh_p = 0.050000 0.200000
+# the cutoff corner frequency of a filter for S
+flh_s = 0.050000 0.100000
+#stlist and weight
+weight = ./201906171455430/sdc1.txt
+# the lenght of stf
+lenstf = 100
+# the event depth (start end dh)
+evdp = 3.0 3.0 1.0
+# the time shift for P ans S phases
+tshift = 200 200
+# the lower boundary for strike dip rake beta and gamma
+lb = 0.000000 0.000000 -180.000000 0.000000 -30.000000
+# the upper boundary for strike dip rake beta and gamma
+hb = 360.000000 90.000000 180.000000 90.000000 30.000000
