@@ -1,0 +1,12 @@
+Make sure that IFORT or GFORTRAN has been installed before compiling the NAGCAP
+
+1, Compilation 
+Open the file 'src/Makefile' and change 'FC' according to your Fortran compiler.
+Then run 'make' in the 'src' directory.
+If the compilation succeeds, two executable programs (nagcap which is the inversion program and nagcap_plot which generates data for plotting) appear in 'src'.
+
+2, Run
+There is an example shown in the package. Before inversion, user should prepare the observed records, the velocity model, the Green functions calculated by the fast GRTM and the controlling parameter file.
+Then run ‘./src/nagcap 201906171455430/’ to invert.
+The program output two files: output_3.txt and result_3.txt. The ‘output_3.txt’ includes the inversion results. The ‘result_3.txt’ includes all parameters searched by the NA.
+Finally, run ‘./src/nagcap_plot 201906171455430/ 3’ and ‘sh plotresult.sh 201906171455430 3’ to generate the waveform comparison between the observed and synthetic. If the inversions with different depths have been done, run ‘sh depth.sh 201906171455430 1 15 1’ to generate a figure which shows the misfit error changes with the depth and determine the best source depth.
